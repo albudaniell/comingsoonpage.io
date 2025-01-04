@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Containere */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; /* Așezăm logo-ul mai sus față de h1 cu mai mult spațiu */
+  overflow: hidden; /* Asigură-te că orice parte din logo care depășește containerul nu este vizibilă */
+}
+
+.logo img {
+  max-width: 100%; /* Permite imaginii să se redimensioneze proporțional */
+  height: auto;
+  object-fit: contain; /* Asigură-te că imaginea se potrivește corect în container */
+}
+
+/* Textul principal */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #FF6347; /* Culoare pentru cuvântul "soon!" */
+}
+
+p {
+  color: #666;
+  margin-bottom: 30px; /* Distanță între textul principal și formularul de email */
+}
+
+/* Secțiunea pentru email */
+.email-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stilizarea etichetei */
+.email-label {
+  font-size: 1rem;
+  color: #555;
+  margin-right: 10px; /* Distanță între etichetă și input */
+}
+
+/* Input-ul pentru email */
+.email-input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  outline: none;
+  margin-right: 15px; /* Distanță între input și buton */
+  width: 250px;
+}
+
+/* Butonul Notify Me */
+.notify-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007BFF; 
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.notify-btn:hover {
+  background-color: #0056b3; 
+}
+
+.img-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 600px;
+  height: auto;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.footer .social-icons {
+  display: flex; 
+  justify-content: center; 
+  gap: 15px; /* Distanță între cercuri */
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007BFF; 
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.circle:hover {
+  background-color: #0056b3;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .email-input, .notify-btn {
+    margin-right: 0;
+    margin-bottom: 10px; /* Adaugă spațiu între input și buton pe ecrane mici */
+  }
+
+  .email-section {
+    flex-direction: column; /* Aranjează elementele pe verticală pe ecrane mici */
+  }
+}
